@@ -30,13 +30,8 @@ body {
 
 .cards {
     display: grid;
-    grid-template-areas: 
-    "nine six six six six"
-    'nine three three four seven'
-    'nine two one four seven'
-    'nine two five five seven'
-    'eight eight eight eight seven'
-    ;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     margin: 1rem;
     gap: 1rem;
 }
@@ -45,60 +40,165 @@ body {
     position: relative;
 }
 
+.cards {
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 
 .card {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 50%;
-    border: dotted 5px black;
-}
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+        border-radius: 50%;
+        border: dotted 5px black;
+    }
+
+    .one {
+        background-color:lavenderblush;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+    }
+    
+    .two {
+        background-color: rgb(252, 158, 172);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 5;
+        grid-row-end: 6;
+    }
+    
+    .three {
+        background-color: lightpink;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
+    .four {
+        background-color: rgb(253, 81, 107);
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+    
+    .five {
+        background-color: rgb(252, 117, 137);
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 6;
+    }
+    
+    .six {
+        background-color: rgb(254, 64, 93);
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    
+    .seven {
+        background-color: rgb(180, 0, 27);
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    
+    .eight {
+        background-color: rgb(253, 0, 38);
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 7;
+    }
+    
+    .nine {
+        background-color: rgb(252, 36, 69);
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+@media (min-width: 992px){
+
 
 .one {
     background-color:lavenderblush;
-    grid-area: 'one';
+    grid-column-start: 3;
+    grid-row-start: 3;
 }
 
 .two {
     background-color: rgb(252, 158, 172);
-    grid-area: 'two';
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
 
 .three {
     background-color: lightpink;
-    grid-area: 'three';
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .four {
     background-color: rgb(253, 81, 107);
-    grid-area: 'four';
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
 }
 
 .five {
     background-color: rgb(252, 117, 137);
-    grid-area: 'five';
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
 }
 
 .six {
     background-color: rgb(254, 64, 93);
-    grid-area: 'six';
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 .seven {
     background-color: rgb(180, 0, 27);
-    grid-area: 'seven';
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 6;
 }
 
 .eight {
     background-color: rgb(253, 0, 38);
-    grid-area: 'eight';
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
 
 .nine {
     background-color: rgb(252, 36, 69);
-    grid-area: 'nine';
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
 }
 
 footer {
